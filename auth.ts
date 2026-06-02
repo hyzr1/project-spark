@@ -27,6 +27,7 @@ declare module "@auth/core/jwt" {
 }
 
 const ACCESS_RECHECK_MS = 5 * 60 * 1000;
+const authSecret = process.env.AUTH_SECRET ?? process.env.NEXTAUTH_SECRET;
 
 type DiscordProfile = {
   id?: string;
@@ -41,6 +42,8 @@ type DiscordProfile = {
  * active sessions are then re-checked on a short JWT-side interval.
  */
 export const { handlers, signIn, signOut, auth } = NextAuth({
+  secret: authSecret,
+  trustHost: true,
   session: {
     strategy: "jwt",
     maxAge: 60 * 60 * 24 * 7,
