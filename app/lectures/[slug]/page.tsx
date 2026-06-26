@@ -3,6 +3,7 @@ import Image from "next/image";
 import { notFound, redirect } from "next/navigation";
 import { auth } from "@/auth";
 import { getLecture, LECTURES } from "@/lib/lectures";
+import { hasAcceptedNda } from "@/lib/nda";
 import { Header } from "../../components/header";
 import { Footer } from "../../components/footer";
 import { HlsPlayer } from "../../components/hls-player";
@@ -45,6 +46,13 @@ export default async function LectureDetail({
   }
   if (!session) redirect(`/lectures/sign-in?callbackUrl=/lectures/${lecture.slug}`);
   if (!session.accessGranted) redirect("/lectures/no-access");
+  if (!(await hasAcceptedNda(session.discordId))) {
+    redirect(
+      `/lectures/nda?callbackUrl=${encodeURIComponent(
+        `/lectures/${lecture.slug}`,
+      )}`,
+    );
+  }
 
   if (process.env.LECTURES_DISABLED === "1") {
     return (

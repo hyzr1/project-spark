@@ -1,0 +1,333 @@
+.page {
+  min-height: 100svh;
+  padding: 112px 24px 72px;
+  background:
+    linear-gradient(rgba(159, 183, 204, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(159, 183, 204, 0.04) 1px, transparent 1px),
+    radial-gradient(circle at 72% 20%, rgba(125, 183, 232, 0.11), transparent 34%),
+    #020303;
+  background-size: 64px 64px, 64px 64px, auto, auto;
+}
+
+.shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(360px, 0.65fr);
+  width: min(100%, 1280px);
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  background: rgba(4, 5, 6, 0.9);
+  box-shadow: 0 36px 110px rgba(0, 0, 0, 0.5);
+}
+
+.documentPanel {
+  min-width: 0;
+  padding: 26px;
+}
+
+.documentHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.documentHeader p {
+  margin: 0 0 7px;
+  font-family: var(--font-jetbrains), ui-monospace, monospace;
+  font-size: 0.64rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #7dd3fc;
+}
+
+.documentHeader h1 {
+  margin: 0;
+  font-family: var(--font-bricolage), ui-serif, Georgia, serif;
+  font-size: clamp(1.55rem, 3vw, 2.5rem);
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.96);
+}
+
+.openDocument {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 999px;
+  padding: 9px 13px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: border-color 160ms ease, color 160ms ease;
+}
+
+.openDocument:hover {
+  border-color: rgba(125, 211, 252, 0.5);
+  color: white;
+}
+
+.openDocument svg {
+  width: 13px;
+  height: 13px;
+}
+
+.pdfFrame {
+  height: min(720px, 72svh);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  background: #e9eaec;
+}
+
+.pdfFrame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.acceptancePanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 44px;
+  background:
+    linear-gradient(180deg, rgba(125, 183, 232, 0.08), transparent 38%),
+    rgba(8, 10, 12, 0.94);
+}
+
+.status {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(125, 211, 252, 0.18);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-family: var(--font-jetbrains), ui-monospace, monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(199, 228, 255, 0.76);
+}
+
+.status span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #7dd3fc;
+  box-shadow: 0 0 12px rgba(125, 211, 252, 0.72);
+}
+
+.acceptancePanel h2 {
+  margin: 22px 0 0;
+  font-family: var(--font-bricolage), ui-serif, Georgia, serif;
+  font-size: clamp(2rem, 3vw, 3.1rem);
+  line-height: 0.96;
+  color: white;
+}
+
+.intro {
+  margin: 18px 0 0;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.identity {
+  display: grid;
+  gap: 0;
+  margin: 28px 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.identity div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 0;
+}
+
+.identity dt,
+.identity dd {
+  margin: 0;
+  font-size: 0.72rem;
+}
+
+.identity dt {
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.identity dd {
+  overflow-wrap: anywhere;
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 700;
+  text-align: right;
+}
+
+.error {
+  margin: 18px 0 0;
+  border: 1px solid rgba(255, 94, 108, 0.34);
+  border-radius: 6px;
+  padding: 11px 13px;
+  background: rgba(255, 94, 108, 0.08);
+  color: #ff9aa3;
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
+
+.form {
+  display: grid;
+  gap: 16px;
+  margin-top: 26px;
+}
+
+.form label:not(.confirmation) {
+  display: grid;
+  gap: 8px;
+}
+
+.form label > span:first-child {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.form input[type="text"] {
+  width: 100%;
+  min-height: 46px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 6px;
+  padding: 0 13px;
+  outline: none;
+  background: rgba(0, 0, 0, 0.38);
+  color: white;
+  font: inherit;
+  font-size: 0.88rem;
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.form input[type="text"]:focus {
+  border-color: rgba(125, 211, 252, 0.6);
+  box-shadow: 0 0 0 3px rgba(125, 211, 252, 0.09);
+}
+
+.confirmation {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 11px;
+  align-items: start;
+  cursor: pointer;
+}
+
+.confirmation input {
+  width: 16px;
+  height: 16px;
+  margin: 2px 0 0;
+  accent-color: #9fb7cc;
+  cursor: pointer;
+}
+
+.confirmation span {
+  font-size: 0.72rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.form button {
+  display: inline-flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 0;
+  border-radius: 999px;
+  background: #c7e4ff;
+  color: #061019;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 800;
+  box-shadow: 0 18px 48px -24px rgba(125, 211, 252, 0.8);
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.form button:hover {
+  transform: translateY(-1px);
+  background: white;
+}
+
+.form button svg {
+  width: 14px;
+  height: 14px;
+}
+
+.finePrint {
+  margin: 18px 0 0;
+  font-size: 0.64rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.36);
+}
+
+.finePrint a {
+  color: rgba(255, 255, 255, 0.65);
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 960px) {
+  .page {
+    padding-top: 96px;
+  }
+
+  .shell {
+    grid-template-columns: 1fr;
+  }
+
+  .acceptancePanel {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-left: 0;
+  }
+
+  .pdfFrame {
+    height: 560px;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 84px 12px 48px;
+  }
+
+  .documentPanel,
+  .acceptancePanel {
+    padding: 22px;
+  }
+
+  .documentHeader {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .pdfFrame {
+    height: 460px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .openDocument,
+  .form input,
+  .form button {
+    transition: none;
+  }
+
+  .form button:hover {
+    transform: none;
+  }
+}

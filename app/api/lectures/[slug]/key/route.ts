@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { auth } from "@/auth";
 import { getLecture } from "@/lib/lectures";
 import { lectureKey } from "@/lib/vault";
+import { hasAcceptedNda } from "@/lib/nda";
 
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
@@ -38,6 +39,12 @@ export async function GET(
   }
   if (!session) return new NextResponse("unauthorized", { status: 401 });
   if (!session.accessGranted) return new NextResponse("forbidden", { status: 403 });
+  if (!(await hasAcceptedNda(session.discordId))) {
+    return new NextResponse("member agreement required", {
+      status: 403,
+      headers: { "X-NDA-Required": "1" },
+    });
+  }
 
   const key = lectureKey(lecture.slug);
   if (!key) {

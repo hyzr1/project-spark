@@ -1,7 +1,6 @@
 /**
- * Lecture registry for Project Spark. Maps URL slugs to on-disk encrypted
- * HLS bundles. Adding a lecture = drop encrypted segments under
- * private/lectures/<dir>/ and add an entry here.
+ * Lecture registry for Project Spark. Each entry maps a public slug to an
+ * encrypted HLS release in the private Sparkzy vault.
  */
 export type Lecture = {
   slug: string;
@@ -15,57 +14,27 @@ export type Lecture = {
 
 export const LECTURES: Lecture[] = [
   {
-    slug: "spark-1.0",
-    dir: "spark-1.0",
+    slug: "ote-entries",
+    dir: "ote-entries",
     code: "SM-01",
-    title: "Spark Method 1.0 — Foundation",
+    title: "OTE + Entries",
     duration: "11 min",
-    tag: "Core",
+    tag: "Method",
     summary:
-      "The very first Project Spark lecture. Sparkzy walks the framework from zero — what we trade, when we trade, and the single read that fires every entry.",
+      "A focused walkthrough of optimal trade entry structure, entry confirmation, execution timing, and the invalidation that keeps each setup controlled.",
   },
   {
-    slug: "spark-2.0",
-    dir: "spark-2.0",
+    slug: "stdv-full-guide",
+    dir: "stdv-full-guide",
     code: "SM-02",
-    title: "Spark Method 2.0 — Reads & invalidation",
-    duration: "18 min",
-    tag: "Core",
-    summary:
-      "How Sparkzy reads order-flow build-up at the open. When the tape carries enough conviction to enter, when it's still flat, and where the trade stops being a Spark setup.",
-  },
-  {
-    slug: "bias-1.0",
-    dir: "bias-1.0",
-    code: "SM-03",
-    title: "Session bias 1.0 — The pre-open read",
-    duration: "14 min",
+    title: "Stdv Full Guide",
+    duration: "30 min",
     tag: "Method",
     summary:
-      "How the previous session sets up the current one. The bias framework Sparkzy uses to arrive at the open with a directional hypothesis before the bell.",
-  },
-  {
-    slug: "entry-1.0",
-    dir: "entry-1.0",
-    code: "SM-04",
-    title: "Entries 1.0 — Trigger & sizing",
-    duration: "17 min",
-    tag: "Method",
-    summary:
-      "Trigger candle, entry placement, stop logic, and how to size the position to your account's R. The mechanics of pulling the trigger without flinching.",
-  },
-  {
-    slug: "smt-1.0",
-    dir: "smt-1.0",
-    code: "SM-05",
-    title: "SMT confirmation × session bias",
-    duration: "16 min",
-    tag: "Method",
-    summary:
-      "Pairing the session bias read with SMT divergence between correlated assets — locating the trade location, timing the entry, and defining the kill.",
+      "How to perfectly use stdv to catch continuations and reversals.",
   },
 ];
 
 export function getLecture(slug: string): Lecture | undefined {
-  return LECTURES.find((l) => l.slug === slug);
+  return LECTURES.find((lecture) => lecture.slug === slug);
 }

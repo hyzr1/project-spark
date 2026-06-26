@@ -1,5 +1,6 @@
 import { auth } from "@/auth";
 import { LECTURES } from "@/lib/lectures";
+import { hasAcceptedNda } from "@/lib/nda";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { Footer } from "../components/footer";
@@ -29,6 +30,9 @@ export default async function LecturesPage() {
 
   if (!session) redirect("/lectures/sign-in");
   if (!session.accessGranted) redirect("/lectures/no-access");
+  if (!(await hasAcceptedNda(session.discordId))) {
+    redirect("/lectures/nda?callbackUrl=%2Flectures");
+  }
 
   return (
     <>
