@@ -34,7 +34,7 @@ export function ClosingCTA() {
 
         <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row">
           <a
-            href="https://discord.gg/PD4UKbaem"
+            href="https://discord.gg/projectspark"
             target="_blank"
             rel="noopener noreferrer"
             className="group btn-shimmer inline-flex min-h-12 items-center gap-2 rounded-full bg-accent px-7 text-[14px] font-bold text-ink shadow-[0_18px_60px_-24px_rgba(125,183,232,0.75)] transition-all hover:-translate-y-0.5 hover:bg-accent-soft"

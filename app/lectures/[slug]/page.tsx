@@ -228,7 +228,7 @@ export default async function LectureDetail({
                       </p>
 
                       <a
-                        href="https://discord.gg/PD4UKbaem"
+                        href="https://discord.gg/projectspark"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="mt-5 inline-flex items-center justify-center gap-2 rounded-full border border-border bg-background/60 px-4 py-2 text-[12.5px] text-foreground/85 transition-colors hover:border-accent hover:bg-card hover:text-accent"

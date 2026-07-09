@@ -38,7 +38,7 @@ export function Header() {
             Members
           </a>
           <a
-            href="https://discord.gg/PD4UKbaem"
+            href="https://discord.gg/projectspark"
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-[13px] font-bold text-black transition-all hover:-translate-y-0.5 hover:bg-accent"

@@ -9,7 +9,7 @@ const links = [
   { label: "FAQ", href: "/#faq" },
   {
     label: "Discord",
-    href: "https://discord.gg/PD4UKbaem",
+    href: "https://discord.gg/projectspark",
     external: true,
   },
 ];

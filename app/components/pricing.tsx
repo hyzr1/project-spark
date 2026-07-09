@@ -18,7 +18,7 @@ const tiers: Tier[] = [
     id: "monthly",
     num: "01",
     name: "Monthly",
-    price: "$300",
+    price: "$175",
     cadence: "/ mo - cancel anytime",
     blurb: "Try the desk with live sessions, signals, and the Discord.",
     cta: "Start monthly",
@@ -33,7 +33,7 @@ const tiers: Tier[] = [
     id: "lifetime",
     num: "02",
     name: "Lifetime",
-    price: "$1,000",
+    price: "$600",
     cadence: "one-time",
     blurb: "The full Spark Method vault, every replay, and Sunday cohort calls.",
     cta: "Get lifetime",
@@ -51,7 +51,7 @@ const tiers: Tier[] = [
     id: "private",
     num: "03",
     name: "1-on-1",
-    price: "$2,300",
+    price: "$1,500",
     cadence: "one-time - application",
     blurb: "Lifetime plus a weekly private call and direct DM line with Sparkzy.",
     cta: "Apply 1-on-1",
@@ -156,7 +156,7 @@ export function Pricing() {
                     ))}
                   </ul>
                   <a
-                    href="https://discord.gg/PD4UKbaem"
+                    href="https://discord.gg/projectspark"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`group mt-6 inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-5 text-[13.5px] font-bold transition-all ${

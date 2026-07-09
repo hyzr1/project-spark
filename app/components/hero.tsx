@@ -85,7 +85,7 @@ export function Hero() {
           style={{ animationDelay: "920ms" }}
         >
           <a
-            href="https://discord.gg/PD4UKbaem"
+            href="https://discord.gg/projectspark"
             target="_blank"
             rel="noopener noreferrer"
             className="group btn-shimmer inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-white px-6 text-[14px] font-bold text-black shadow-[0_24px_80px_-34px_rgba(255,255,255,0.95)] transition-all hover:-translate-y-0.5 hover:bg-accent"

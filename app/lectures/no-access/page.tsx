@@ -27,7 +27,7 @@ export default function NoAccessPage() {
 
           <div className="relative mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <a
-              href="https://discord.gg/PD4UKbaem"
+              href="https://discord.gg/projectspark"
               target="_blank"
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-[14px] font-bold text-ink transition-all hover:bg-accent-soft hover:shadow-[0_0_0_5px_rgba(159,183,204,0.1)]"
@@ -38,7 +38,7 @@ export default function NoAccessPage() {
               </svg>
             </a>
             <a
-              href="https://discord.gg/PD4UKbaem"
+              href="https://discord.gg/projectspark"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-border bg-background/40 px-5 py-3 text-[13.5px] text-foreground/85 transition-colors hover:border-accent hover:bg-card hover:text-accent"
@@ -50,7 +50,7 @@ export default function NoAccessPage() {
           <p className="relative mt-7 text-[12px] text-muted">
             Already a member?{" "}
             <a
-              href="https://discord.gg/PD4UKbaem"
+              href="https://discord.gg/projectspark"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground/85 underline underline-offset-4 hover:text-accent"

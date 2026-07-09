@@ -107,7 +107,7 @@ export default async function SignInPage({
               <p className={styles.membership}>
                 Need access?{" "}
                 <a
-                  href="https://discord.gg/PD4UKbaem"
+                  href="https://discord.gg/projectspark"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
